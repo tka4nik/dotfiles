@@ -1,6 +1,6 @@
 [package]
-name = "webdesserts"
-authors = [ "Michael Mullins" ]
+name = "tka4nik"
+authors = [ "Tka4nik" ]
 
 [link]
 "~/.bashrc" = "termnial/bash/bashrc"
