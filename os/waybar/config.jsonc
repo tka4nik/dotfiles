@@ -1,0 +1,165 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "margin-left": 5,
+    "margin-right": 5,
+    "margin-top": 7,
+    "margin-bottom": 0,
+    "spacing": 5,
+    "reload_style_on_change": true,
+
+    "modules-left": [
+      "hyprland/workspaces",
+      "clock",
+      "clock#time"
+    ],
+
+    "modules-center": [
+    	"custom/cava"
+    ],
+
+    "modules-right": [
+	    "hyprland/language",
+	    "group/metrics",
+		"group/sound",
+		"custom/vpn",
+		"tray",
+		"battery",
+		"custom/power"
+    ],
+
+    // Modules configuration
+    "hyprland/workspaces": {
+      "on-click": "activate",
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+        "default": "<span size='x-large'>󰧞</span>",
+        "active": "<span size='x-large'>󰧞</span>",
+        "empty": "<span size='x-large'></span>"
+       },
+      "persistent-workspaces": {
+            "*": 4,
+      }
+    },
+
+    "clock": {
+    	"interval": 60,
+    	"format": " {:%A, %B %d}",
+   		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+	        "mode"          : "month",
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+	            "months":     "<span color='#ffead3'><b>{}</b></span>",
+	            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+	            "weeks":      "<span color='#99ffdd'><b>{:%W}</b></span>",
+	            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+	            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+	            }
+            },
+    },
+
+    "clock#time": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "tooltip": false
+     },
+
+     "custom/cava": {
+     	"format": "{}",
+     	"return-type": "json",
+     	"exec": "sleep 3 && ~/.dotfiles/cava/cava-module.sh",
+     	"on-click": "playerctl play-pause"
+     },
+
+    "hyprland/language": {
+    	"format": "{}",
+    	"format-en": "EN",
+    	"format-ru": "RU",
+    	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    },
+
+    "group/metrics": {
+    	"orientation": "horizontal",
+  			"modules": [
+  				"cpu",
+  				"memory",
+		]
+    },
+
+    "cpu": {
+ 	    "interval": 2,
+ 	    "format": "{load} ",
+ 	    "tooltip": false,
+    },
+ 
+    "memory": {
+ 	    "interval": 2,
+ 	    "format": "{}% "
+   	},
+
+    "group/sound": {
+    	"orientation": "horizontal",
+ 			"modules": [
+ 				"custom/wireplumber",
+ 				"custom/wireplumber-microphone"
+		]
+    },
+
+    "custom/wireplumber": {
+	    "tooltip": false,
+	    "max-length": 6,
+	    "signal": 8,
+	    "restart-interval": 10,
+	    "exec": "$HOME/.dotfiles/waybar/wireplumber.sh",
+	    "on-click": "pavucontrol"
+    },
+
+    "custom/wireplumber-microphone": {
+    	"format": "<span size='x-large'>{}</span>",
+    	"tooltip": false,
+	    "max-length": 6,
+	    "signal": 8,
+	    "restart-interval": 10,
+	    "exec": "$HOME/.dotfiles/waybar/wireplumber-mic.sh",
+	    "on-click": "$HOME/.dotfiles/waybar/microphone.sh"
+   },
+
+   "custom/vpn": {
+   		"format": "<span size='xx-large'>{}</span>",
+   		"interval": 1,
+   		"tooltip": true,
+		"return-type": "json",
+   		"exec": "$HOME/.dotfiles/scripts/sing-box-module.sh",
+   		"on-click": "pkexec $HOME/.dotfiles/scripts/sing-box.sh",
+   },
+
+    "tray": {
+    	"spacing": 10,
+    	"icon-size": 18
+    },
+
+    "battery": {
+      "states": {
+        // "good": 95,
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      "format-charging": "{capacity}% ",
+      "format-plugged": "{capacity}% ",
+      "format-alt": "{time} {icon}",
+      // "format-good": "", // An empty format will hide the module
+      // "format-full": "",
+      "format-icons": ["", "", "", "", ""]
+    },
+
+    "custom/power": {
+        "format": "<span size='x-large'>⏻</span>",
+        "on-click": "systemctl poweroff"
+    }
+}
+    
