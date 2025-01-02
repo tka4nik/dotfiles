@@ -3,9 +3,9 @@ name = "tka4nik"
 authors = [ "Tka4nik" ]
 
 [link]
-"~/.bashrc" = "termnial/bash/bashrc"
+"~/.bashrc" = "terminal/bash/bashrc"
 "~/.bash_profile" = "terminal/bash/bash_profile"
-"~/.zshrc" = "termnial/zsh/zshrc"
+"~/.zshrc" = "terminal/zsh/zshrc"
 "~/.oh-my-zsh/themes/oxide.zsh-theme" = "terminal/zsh/oxide.zsh-theme"
 "~/.nanorc" = "nano/nanorc"
 "~/.config/micro/settings.json" = "micro/settings.json"
