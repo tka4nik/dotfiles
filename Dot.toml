@@ -4,16 +4,4 @@ authors = [ "Tka4nik" ]
 
 [link]
 "~/.bashrc" = "terminal/bash/bashrc"
-"~/.bash_profile" = "terminal/bash/bash_profile"
-"~/.zshrc" = "terminal/zsh/zshrc"
-"~/.oh-my-zsh/themes/oxide.zsh-theme" = "terminal/zsh/oxide.zsh-theme"
-"~/.nanorc" = "nano/nanorc"
-"~/.config/micro/settings.json" = "micro/settings.json"
-"~/.config/hypr/hyprland.conf" = "os/hyprland/hyprland.conf"
-"~/.config/hypr/hyprpaper.conf" = "os/hyprland/hyprpaper.conf"
-"~/.config/waybar/config.jsonc" = "os/waybar/config.jsonc"
-"~/.config/waybar/style.css" = "os/waybar/style.css"
-"~/.config/wal/templates/colors-hyprland.conf" = "os/wal/colors-hyprland.conf"
-"~/.config/wal/templates/colors-rofi-dark.rasi" = "os/wal/colors-rofi-dark.rasi"
-"~/.config/wal/templates/colors-waybar.css" = "os/wal/colors-waybar.css"
 
