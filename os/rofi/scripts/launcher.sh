@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir="$HOME/.dotfiles/rofi/"
+dir="$HOME/dotfiles/os/rofi/"
 theme='style'
 
 ## Run
