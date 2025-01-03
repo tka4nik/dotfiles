@@ -3,7 +3,7 @@ Description=Sing-Box Service
 After=network.target nss-lookup.target
 
 [Service]
-ExecStart=/usr/bin/sing-box run -c /home/tka4nik/.dotfiles/vpn/config-ge.json
+ExecStart=/usr/bin/sing-box run -c /home/tka4nik/.vpn/config-ge.json
 Restart=on-failure
 RestartPreventExitStatus=23
 LimitNPROC=10000
