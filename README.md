@@ -1,1 +1,1 @@
-`./medots deploy -c config.yaml`
+```./medots deploy -c config.yaml```
