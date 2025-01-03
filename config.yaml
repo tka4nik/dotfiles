@@ -1,0 +1,53 @@
+bash:
+ - source: ./terminal/bash/bashrc
+   destination: ~/.bashrc
+ - source: ./terminal/bash/bash_profile
+   destination: ~/.bash_profile
+ 
+zsh:
+  - source: ./terminal/zsh/zshrc
+    destination: ~/.zshrc
+  - source: ./terminal/zsh/oxide.zsh-theme
+    destination: ~/.oh-my-zsh/themes/oxide.zsh-theme
+
+nano:
+  - source: ./nano/nanorc
+    destination: ~/.nanorc
+
+micro:
+  - source: ./micro/settings.json
+    destination: ~/.config/micro/settings.json
+
+hyprland:
+  - source: ./os/hyprland/hyprland.conf
+    destination: ~/.config/hypr/hyprland.conf
+  - source: ./os/hyprland/hyprpaper.conf
+    destination: ~/.config/hypr/hyprpaper.conf
+
+waybar:
+  - source: ./os/waybar/config.jsonc
+    destination: ~/.config/waybar/config.jsonc
+  - source: ./os/waybar/style.css
+    destination: ~/.config/waybar/style.css
+
+wal:
+  - source: ./os/wal/colors-hyprland.conf
+    destination: ~/.config/wal/templates/colors-hyprland.conf
+  - source: ./os/wal/colors-rofi-dark.rasi
+    destination: ~/.config/wal/templates/colors-rofi-dark.rasi
+  - source: ./os/wal/colors-waybar.css
+    destination: ~/.config/wal/templates/colors-waybar.css
+  - run_interactive: sudo cp $(pwd)/os/wal/scripts/swww-daemon.service /etc/systemd/system/
+ 
+cava:
+  - source: ./os/cava/config
+    destination: ~/.config/cava/config
+
+firefox:
+  - source: ./firefox/chrome
+    destination: /home/tka4nik/.mozilla/firefox/3gz0asuj.default-release-1728078271204/chrome
+  - source: ./firefox/user.js
+    destination: /home/tka4nik/.mozilla/firefox/3gz0asuj.default-release-1728078271204/user.js
+
+sing-box:
+  - run_interactive: sudo cp $(pwd)/os/vpn/sing-box.service /etc/systemd/system/

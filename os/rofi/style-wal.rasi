@@ -1,0 +1,143 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+
+
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun";
+}
+
+@import "~/.cache/wal/colors-rofi-dark"
+
+
+/*****----- Global Properties -----*****/
+* {
+    font:                        "JetBrains Mono NL 10";
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       40%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               13px;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox"];
+}
+
+listbox {
+    spacing:                     15px;
+    padding:                     10px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     7px;
+    padding:                     10px 5px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+    children:                    [ "entry", "mode-switcher" ];
+}
+
+entry {
+    enabled:                     true;
+    expand:                      false;
+    width:                       10%;
+    padding:                     12px 16px;
+    border-radius:               12px;
+    background-color:            @active-background;
+    text-color:                  @text-color;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       4;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     6px;
+    border-radius:               7px;
+    background-color:            @selected-background;
+    text-color:                  @text-color;
+    cursor:                      pointer;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  @text-color;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+element selected.normal {
+    background-color:            @foreground;
+    text-color:                  @selected-text-color;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            @active-background;
+    text-color:                  @text-color;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            @background;
+    text-color:                  @text-color;
+}

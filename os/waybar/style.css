@@ -6,40 +6,40 @@
 @define-color textcolor @cursor;
 
 * {
-    font-family: "JetBrains Mono NL", "NerdFontsSymbols Nerd Font", "iconmoon-feather";
-    font-size: 12px;
-    font-weight: bold;
+	font-family: "JetBrains Mono NL", "NerdFontsSymbols Nerd Font", "iconmoon-feather";
+    	font-size: 12px;
+    	font-weight: bold;
 }
 
 #clock, #language, #metrics, #custom-cava, #sound, #battery, #tray, #window, #taskbar, #custom-power, #custom-vpn {
-    background-color: @bg;
-    color: @color7;
-    opacity: .8;
-    border-radius: 18px;
-    padding: 1px 10px 1px 10px;
-    margin: 0px 5px 0px 0px;
-    border: 3px solid @color3;
+    	background-color: @bg;
+    	color: @color7;
+    	opacity: .8;
+    	border-radius: 18px;
+    	padding: 1px 10px 1px 10px;
+    	margin: 0px 5px 0px 0px;
+    	border: 3px solid @color3;
 }
 
 window#waybar {
-    border-bottom: 0px solid #ffffff;
-    background: transparent;
-    transition-property: none;
-    transition-duration: 0s;
+    	border-bottom: 0px solid #ffffff;
+    	background: transparent;
+    	transition-property: none;
+    	transition-duration: 0s;
 }
 
 #workspaces {
-    background: @bg;
-    padding: 0px 10px;
-    margin: 0px 5px;
-    border-radius: 18px;
-    border: 3px solid @color5;
+    	background: @bg;
+    	padding: 0px 10px;
+    	margin: 0px 5px;
+    	border-radius: 18px;
+    	border: 3px solid @color5;
 }
 
 #workspaces button {
-    color: @color1;
-    transition: color 0.3s ease, border 0.3s ease; /* Smooth transition for color and subtle border change */
-    border: none;
+    	color: @color1;
+    	transition: color 0.3s ease, border 0.3s ease; /* Smooth transition for color and subtle border change */
+    	border: none;
 }
 
 #workspaces button:hover {
@@ -48,23 +48,23 @@ window#waybar {
 	border: none;
 	box-shadow: none;
 	text-shadow: none;
-    color: @color2; /* Subtle color change on hover */
+	color: @color2; /* Subtle color change on hover */
 }
 
 #workspaces button.active {
-    color: @color4;
-    transition: color 0.3s ease, font-weight 0.3s ease;
+    	color: @color4;
+    	transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 #workspaces button.inactive {
-    color: @color5;
+    	color: @color5;
 }
 
 #custom-cava {
 	background-color: @color2;
 	border: 3px solid @color2;
 	color: @color4;
-    font-size: 20px;
+    	font-size: 20px;
 	min-width: 190px;
 	opacity: 1;
 }
@@ -104,6 +104,6 @@ window#waybar {
 }
 
 #window {
-    margin-right: 0px;
-    margin-left: 0px;
+    	margin-right: 0px;
+    	margin-left: 0px;
 }

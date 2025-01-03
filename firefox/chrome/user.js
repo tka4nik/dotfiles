@@ -1,0 +1,1 @@
+/home/tka4nik/dotfiles/firefox/user.js
