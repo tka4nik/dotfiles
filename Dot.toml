@@ -1,7 +1,0 @@
-[package]
-name = "tka4nik"
-authors = [ "Tka4nik" ]
-
-[link]
-"~/.bashrc" = "terminal/bash/bashrc"
-
